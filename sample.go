@@ -5,9 +5,17 @@ import (
 	"queue/collections"
 )
 
-func sampleQueueString() {
+func main() {
 
-	stringQueue := collections.NewQueue[string]()
-	fmt.Println(stringQueue.Get())
+	sq := collections.NewQueue[string]()
+	sq.Put("ds")
+	sq.Put("dddd")
+	// stringQueue.Put("sss")
+
+	fmt.Println(sq.Get())
+
+	fmt.Println(sq.Get())
+
+	fmt.Println(sq.Get())
 
 }

@@ -17,7 +17,7 @@ func (q *queue[T]) Put(item T) {
 	q.items = append(q.items, item)
 }
 
-func (q *queue[T]) Get() *T {
+func (q *queue[T]) Get() any {
 	q.mutex.Lock()
 	defer q.mutex.Unlock()
 	if len(q.items) == 0 {
@@ -26,5 +26,9 @@ func (q *queue[T]) Get() *T {
 
 	item := q.items[0]
 	q.items = q.items[1:]
-	return &item
+	return item
+}
+
+func (q *queue[T]) Size() int {
+	return len(q.items)
 }
