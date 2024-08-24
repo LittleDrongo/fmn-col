@@ -7,9 +7,9 @@ import (
 
 func main() {
 
-	sq := collections.NewQueue[string]()
-	sq.Put("ds")
-	sq.Put("dddd")
+	sq := collections.NewQueue[int]()
+	sq.Put(0)
+	sq.Put(5)
 	// stringQueue.Put("sss")
 
 	fmt.Println(sq.Get())
