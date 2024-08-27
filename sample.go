@@ -1,21 +1,25 @@
 package main
 
 import (
-	"fmt"
 	"queue/collections"
 )
 
 func main() {
 
-	sq := collections.NewQueue[int]()
-	sq.Put(0)
-	sq.Put(5)
-	// stringQueue.Put("sss")
+	q := collections.NewQueue[any]()
 
-	fmt.Println(sq.Get())
+	q.Put(30)
+	q.Put("dd")
+	q.Put('d')
+	q.Put("dd")
 
-	fmt.Println(sq.Get())
-
-	fmt.Println(sq.Get())
+	// // element := q.Get()
+	// fmt.Println(
+	// 	q.Get(),
+	// 	q.Get(),
+	// 	q.Get(),
+	// 	q.Get(),
+	// 	q.Get(),
+	// )
 
 }
